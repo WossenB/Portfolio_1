@@ -18,4 +18,9 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: mode === "production" ? "/portfolio_1/" : "/",
+  build: {
+    outDir: "dist",
+    sourcemap: true,
+  },
 }));
